@@ -14,17 +14,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK 8
         uses: actions/setup-java@v4
         with:
-          java-version: 17
+          java-version: 8
           distribution: 'adopt'
           cache: maven
 
       - name: Build with joda Wrapper and Publish
         run: |
-          ./mvnw -B package
-          ./mvnw deploy -e -X --settings .github/settings.xml
+          ./mvnw deploy --settings .github/settings.xml
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
