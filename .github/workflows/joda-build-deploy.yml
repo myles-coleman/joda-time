@@ -3,7 +3,7 @@ name: Java CI with Maven
 on: [push]
 
 jobs:
-  build-spring-petclinic:
+  build-joda-time:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -18,7 +18,7 @@ jobs:
 
       - name: Build with joda Wrapper and Publish
         run: |
-          ./mvnw deploy --settings .github/settings.xml
+          ./mvn deploy --settings .github/settings.xml
         env:
           NEXUS_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           NEXUS_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}
