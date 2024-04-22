@@ -8,9 +8,12 @@
   <artifactId>joda-time</artifactId>
   <packaging>jar</packaging>
   <name>Joda-Time</name>
-  <version>2.12.7</version>
+  <version>3.0.0</version>
   <description>Date and time library to replace JDK date handling</description>
   <url>https://www.joda.org/joda-time/</url>
+
+
+  
 
   <!-- ==================================================================== -->
   <issueManagement>
@@ -859,19 +862,17 @@
   <!-- ==================================================================== -->
   <distributionManagement>
     <repository>
-      <id>sonatype-joda-staging</id>
-      <name>Sonatype OSS staging repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-      <layout>default</layout>
+      <id>maven-releases</id>
+      <name>Nexus Repo</name>
+      <url>https://a9f3-2603-3006-9-1200-c97d-5fe6-7a8a-9ba3.ngrok-free.app/repository/maven-releases/</url>
     </repository>
+  
     <snapshotRepository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>sonatype-joda-snapshot</id>
-      <name>Sonatype OSS snapshot repository</name>
-      <url>https://oss.sonatype.org/content/repositories/joda-snapshots</url>
-      <layout>default</layout>
+      <id>maven-snapshots</id>
+      <name>Nexus Repo</name>
+      <url>https://a9f3-2603-3006-9-1200-c97d-5fe6-7a8a-9ba3.ngrok-free.app/repository/maven-snapshots/</url>
     </snapshotRepository>
-    <downloadUrl>https://oss.sonatype.org/content/repositories/joda-releases</downloadUrl>
+
   </distributionManagement>
 
   <!-- ==================================================================== -->
@@ -1075,9 +1076,9 @@
     <maven-toolchains-plugin.version>3.1.0</maven-toolchains-plugin.version>
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
     <!-- Properties for maven-compiler-plugin -->
-    <maven.compiler.compilerVersion>1.5</maven.compiler.compilerVersion>
-    <maven.compiler.source>1.5</maven.compiler.source>
-    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.compiler.compilerVersion>1.7</maven.compiler.compilerVersion>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.fork>true</maven.compiler.fork>
     <maven.compiler.verbose>false</maven.compiler.verbose>
     <maven.compiler.optimize>true</maven.compiler.optimize>

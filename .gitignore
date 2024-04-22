@@ -10,7 +10,7 @@
 .idea
 *.iml
 /.mvn/
-
+.java-version
 /build/
 /lib/
 /test-output/
